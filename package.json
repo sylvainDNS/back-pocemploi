@@ -1,0 +1,18 @@
+{
+  "name": "back-pocemploi",
+  "version": "1.0.0",
+  "description": "Handle Redis connection for Poc'Emploi",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --watch --mode development",
+    "start": "nodemon dist/main.js",
+    "build": "webpack --mode production"
+  },
+  "repository": "git@github.com:sylvainDNS/back-pocemploi.git",
+  "author": "SylvainDNS",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.3"
+  }
+}

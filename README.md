@@ -1,2 +1,2 @@
 # back-pocemploi
-Handle Redis connection for Poc'Emploi (github.com/clusson/poc-emploi)
+Handle data with Redis for [Poc'Emploi](github.com/clusson/poc-emploi)
