@@ -13,15 +13,15 @@ const init = () => {
 }
 
 export const get = (client, setName) => {
-    const getAsync = promisify(client.get).bind(client)
+    const getAsync = promisify(client.hgetall).bind(client)
 
     return getAsync(setName).then((res) => {
-        console.log('Result : ', res)
+        return res
     })
 }
 
-export const set = (client, setName, data) => {
-    return client.set(setName, data)
+export const set = (client, setName, key, data) => {
+    return client.hset(setName, key, data)
 }
 
 export const client = init() 

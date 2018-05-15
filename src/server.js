@@ -1,8 +1,11 @@
 import { config } from './utils/config'
-import { client } from './utils/redis'
 import { Server } from 'hapi'
-import Io from 'socket.io'
+import io from 'socket.io'
+import HapiSwagger from 'hapi-swagger'
+import Vision from 'vision'
+import Inert from 'inert'
 import { devourSocket } from './socket/devourSocket'
+import { consumeRoute } from './route/consumeRoute'
 
 const start = () => {
     const server = new Server({
@@ -11,7 +14,20 @@ const start = () => {
         routes: { cors: { origin: ['*'] } }
     })
 
-    server.register([])
+    const swaggerOptions = {
+        info: {
+            title: 'Poc\'Emploi API Documentation',
+            version: '1.0',
+        },
+    }
+
+    server.register([
+        Inert,
+        Vision,
+        {
+            plugin: HapiSwagger,
+            options: swaggerOptions
+        }])
         .then(() => {
             server.start()
                 .then(
@@ -22,7 +38,10 @@ const start = () => {
                 )
         })
 
-    const socket = Io(server.listener)
+    const socket = io(server.listener, { serveClient: false })
+
+
+    consumeRoute(server)
 
     devourSocket(socket)
 
