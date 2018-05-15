@@ -9,6 +9,7 @@ We're using Swagger.
 ```bash
 export REDIS_HOST=localhost
 export REDIS_PORT=6379
+export REDIS_PASSWORD=pwd
 
 export HAPI_HOST=localhost
 export HAPI_PORT=4444

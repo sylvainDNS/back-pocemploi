@@ -9,6 +9,9 @@ const init = () => {
         console.error(err);
     });
 
+    if (config.redis.password)
+        client.auth(config.redis.password)
+
     return client
 }
 
