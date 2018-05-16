@@ -6,7 +6,7 @@ const maxValueObject = object => {
 }
 
 const b64ToBinary = (b64Img) => {
-    let base64Data = b64Img.replace(/^data:image\/jpeg;base64,/, "")
+    let base64Data = b64Img.replace(/^data:image\/jpeg;base64,/, '')
     base64Data += base64Data.replace('+', ' ');
     const binaryData = new Buffer(base64Data, 'base64')
 
