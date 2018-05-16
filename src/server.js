@@ -5,6 +5,7 @@ import HapiSwagger from 'hapi-swagger'
 import Vision from 'vision'
 import Inert from 'inert'
 import { devourSocket } from './socket/devourSocket'
+import { cognitiveSocket } from './socket/cognitiveSocket'
 import { consumeRoute } from './route/consumeRoute'
 
 const start = () => {
@@ -44,6 +45,7 @@ const start = () => {
     consumeRoute(server)
 
     devourSocket(socket)
+    cognitiveSocket(socket)
 
     return server
 }

@@ -1,5 +1,5 @@
 # back-pocemploi
-Handle data with Redis for [Poc'Emploi](github.com/clusson/poc-emploi).
+Handle data with Redis for [Poc'Emploi](https://github.com/clusson/poc-emploi).
 
 ### API Documentation
 API documentation available at [*host*:*port*/documentation]().
@@ -13,4 +13,7 @@ export REDIS_PASSWORD=pwd
 
 export HAPI_HOST=localhost
 export HAPI_PORT=4444
+
+export FACEAPI_URI = key1234567890
+export FACEAPI_KEY = https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect
 ```
