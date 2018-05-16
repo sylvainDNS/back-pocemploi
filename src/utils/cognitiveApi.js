@@ -1,5 +1,6 @@
 import { config } from '../utils/config'
 import fetch from 'node-fetch'
+import { validate } from '../schema/faceApiReplySchema'
 
 const maxValueObject = object => {
     return Object.keys(object).reduce((a, b) => object[a] > object[b] ? a : b)
@@ -36,11 +37,15 @@ export const getEmotion = b64Img => {
         })
         .then(res => res.json())
         .then(json => {
-            const listEmotions = json[0].faceAttributes.emotion
-            const emoMax = maxValueObject(listEmotions)
 
-            // return emoMax == 'anger' ? true : false
-            return true
+
+            if (!validate(json))
+                return false
+
+            const emotions = json[0].faceAttributes.emotion
+            const emoMax = maxValueObject(emotions)
+
+            return emoMax == 'anger' ? true : false
         })
         .catch(res => { console.log(res) })
 
