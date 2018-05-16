@@ -2800,6 +2800,10 @@ joi@13.x.x, joi@^13.1.2:
     isemail "3.x.x"
     topo "3.x.x"
 
+join@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/join/-/join-3.0.0.tgz#cfb841db7b0a1dff132a07a582dbc06c21649713"
+
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"

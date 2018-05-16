@@ -39,7 +39,8 @@ export const getEmotion = b64Img => {
             const listEmotions = json[0].faceAttributes.emotion
             const emoMax = maxValueObject(listEmotions)
 
-            return emoMax == 'anger' ? true : false
+            // return emoMax == 'anger' ? true : false
+            return true
         })
         .catch(res => { console.log(res) })
 
