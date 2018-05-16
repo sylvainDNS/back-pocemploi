@@ -39,7 +39,7 @@ const start = () => {
                 )
         })
 
-    const socket = io(server.listener, { serveClient: false })
+    const socket = io(server.listener)
 
 
     consumeRoute(server)
