@@ -14,6 +14,6 @@ export REDIS_PASSWORD=pwd
 export HAPI_HOST=localhost
 export HAPI_PORT=4444
 
-export FACEAPI_URI = key1234567890
-export FACEAPI_KEY = https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect
+export FACEAPI_URI=https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect
+export FACEAPI_KEY=key1234567890
 ```
