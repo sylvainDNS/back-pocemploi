@@ -12,7 +12,12 @@ const start = () => {
     const server = new Server({
         host: config.hapi.host,
         port: config.hapi.port,
-        routes: { cors: { origin: ['*'] } }
+        routes: {
+            cors: {
+                origin: ['*'],
+                additionalHeaders: ['cache-control', 'x-requested-with']
+            }
+        }
     })
 
     const swaggerOptions = {
