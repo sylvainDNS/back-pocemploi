@@ -20,7 +20,15 @@ export const consumeHandler = {
 const cleanData = data => {
     let cleaned = []
     for (let i in data) {
-        cleaned.push(JSON.parse(data[i]))
+        const tempData = JSON.parse(data[i])
+
+        const retData = {
+            x: tempData.x,
+            y: tempData.y,
+            value: tempData.value
+        }
+
+        cleaned.push(retData)
     }
 
     return cleaned
