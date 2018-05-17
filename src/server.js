@@ -6,7 +6,8 @@ import Vision from 'vision'
 import Inert from 'inert'
 import { devourSocket } from './socket/devourSocket'
 import { cognitiveSocket } from './socket/cognitiveSocket'
-import { consumeRoute } from './route/consumeRoute'
+import { mousemoveRoute } from './route/mousemoveRoute'
+import { clickRoute } from './route/clickRoute'
 
 const start = () => {
     const server = new Server({
@@ -42,7 +43,8 @@ const start = () => {
     const socket = io(server.listener, { serveClient: false })
 
 
-    consumeRoute(server)
+    mousemoveRoute(server)
+    clickRoute(server)
 
     devourSocket(socket)
     cognitiveSocket(socket)
