@@ -1,9 +1,22 @@
 # back-pocemploi
-Handle data with Redis for [Poc'Emploi](https://github.com/clusson/poc-emploi).
+Handle data with Redis for [Poc'Emploi](https://github.com/clusson/poc-emploi) and [Microsoft Face API](https://docs.microsoft.com/en-us/azure/cognitive-services/face/overview).
+
+### Description
+
+###### Tracking datas : 
+Datas are feeded via websocket, stored in redis database, and consumed by REST API.
+
+###### Face API datas : 
+Datas are received and sent via websocket.
 
 ### API Documentation
 API documentation available at [*host*:*port*/documentation]().
 We're using Swagger.
+
+### Monitoring
+Redis database incredibly monitored by [Redsmin](https://github.com/Redsmin).
+![Redsmin monitoring](img/redsmin.png)
+
 
 ### Environment Variables
 ```bash
