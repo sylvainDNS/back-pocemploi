@@ -19,6 +19,9 @@ We're using Swagger.
 Redis database incredibly monitored by [Redsmin](https://github.com/Redsmin).
 ![Redsmin monitoring](img/redsmin.png)
 
+Node.JS application monitored by [Keymetrics](https://keymetrics.io).
+![Keymetrics monitoring](img/keymetrics.png)
+
 
 ### Environment Variables
 ```bash
