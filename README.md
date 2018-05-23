@@ -1,3 +1,5 @@
+[![Build Status](https://jenkins.sylvaindenyse.me/buildStatus/icon?job=build_back-pocemploi)](https://jenkins.sylvaindenyse.me/job/build_back-pocemploi)
+
 # back-pocemploi
 Handle data with Redis for [Poc'Emploi](https://github.com/clusson/poc-emploi) and [Microsoft Face API](https://docs.microsoft.com/en-us/azure/cognitive-services/face/overview).
 
